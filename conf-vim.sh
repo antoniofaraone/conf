@@ -7,6 +7,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 echo "I'm adding some useful plugin into your .vimrc..."
 
+touch ~/.vimrc
+
 echo '" Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
