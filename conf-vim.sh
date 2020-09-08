@@ -2,6 +2,7 @@
 
 echo "I'm installing vim-plug ..."
 
+sudo apt install vim
 
 if [ ! -x /usr/bin/curl ]; then
 	echo "Please install curl first"
