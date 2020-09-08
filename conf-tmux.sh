@@ -4,7 +4,7 @@ git clone https://github.com/arcticicestudio/nord-tmux.git ~/.tmux/themes/nord-t
 
 touch ~/.tmux.conf
 
-echo "~/.tmux/themes/nord-tmux/nord.tmux" >> ~/.tmux.conf
+echo "run-shell ~/.tmux/themes/nord-tmux/nord.tmux" >> ~/.tmux.conf
 
 tmux source-file ~/.tmux.conf
 
