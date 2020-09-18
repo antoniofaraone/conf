@@ -1,4 +1,4 @@
-" Specify a directory for plugins
+	" Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
@@ -37,6 +37,12 @@ Plug '~/my-prototype-plugin'
 
 Plug 'terryma/vim-multiple-cursors'
 
+" Autocompletion
+
+Plug 'davidhalter/jedi-vim'
+
+" [1] Move line up and down 
+Plug 'tpope/vim-unimpaired'
 " Initialize plugin system
 call plug#end()
 
@@ -49,3 +55,13 @@ nmap <C-t> :NERDTreeToggle<CR>
 syntax enable
 colorscheme monokai
 set nu
+
+
+" [1]
+" Move single lines
+nmap <C-k> [e
+nmap <C-j> ]e
+" " Move multiple lines selected
+vmap <C-k> [egv
+vmap <C-j> ]egv
+
