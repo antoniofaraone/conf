@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo apt install tmux -y
+
 git clone https://github.com/arcticicestudio/nord-tmux.git ~/.tmux/themes/nord-tmux
 
 touch ~/.tmux.conf
