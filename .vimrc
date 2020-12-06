@@ -57,6 +57,9 @@ Plug 'tpope/vim-unimpaired'
 "
 " Theme
 Plug 'mhartington/oceanic-next'
+
+" Tabnine
+Plug 'zxqfl/tabnine-vim'
 call plug#end()
 
 """"""""""""""""""""""" Configurazioni
@@ -68,6 +71,7 @@ nmap <C-t> :NERDTreeToggle<CR>
 syntax enable
 colorscheme nord
 set nu
+set relativenumber
 let mapleader = ","
 set laststatus=2
 set noshowmode
