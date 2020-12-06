@@ -48,7 +48,7 @@ setopt hist_verify            # show command with history expansion to user befo
 alias history="history 0"
 alias lc='colorls'
 
-
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
