@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 #
 #  Install zsh powerline fonts and colorls
 #
