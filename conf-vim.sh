@@ -13,6 +13,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "I'm adding some useful plugin into your .vimrc..."
-mv .vimrc ~/
+
+cd ~
+ln -s conf/.vimrc .vimrc
+
 echo "Now reload .vimrc and then, from vim :PlugInstall"
 echo "====================================================="
