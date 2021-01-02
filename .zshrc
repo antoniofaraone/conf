@@ -5,8 +5,18 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 # ~/.zshrc file for zsh non-login shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
+
+source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+
+# source variable
+if [ -d "$HOME/.cargo/bin" ]; then
+export PATH="$HOME/.cargo/bin":$PATH
+fi
+
+
 
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
@@ -215,7 +225,6 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 fi
 source $(dirname $(gem which colorls))/tab_complete.sh
 
-source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

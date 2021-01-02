@@ -7,7 +7,8 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'easymotion/vim-easymotion'
 
 " Barra 
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -38,12 +39,29 @@ set relativenumber
 set laststatus=2
 set noshowmode
 let mapleader = ","
+
+" Direction keys for wrapped lines
+nnoremap <silent> k gk
+nnoremap <silent> j gj
+nnoremap <silent> <Up> gk
+nnoremap <silent> <Down> gj
+inoremap <silent> <Up> <Esc>gka
+inoremap <silent> <Down> <Esc>gja
+
+" Bash / emacs keys for command line
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+set autoindent
+:autocmd InsertEnter,InsertLeave * set cul!
+
+" Visual prompt for command completion
+set wildmenu
 """"""""""""""""""""" TEMA """""""""""""""""""""""
-syntax enable
+syntax on
 colorscheme nord
 
 """"""""""""""""""" Plugin config """""""""""""""" 
-" [1]
+" [1] unimpaired
 " Move single lines
 nmap <C-k> [e
 nmap <C-j> ]e
@@ -51,4 +69,8 @@ nmap <C-j> ]e
 vmap <C-k> [egv
 vmap <C-j> ]egv
 :imap jj <Esc>
-:autocmd InsertEnter,InsertLeave * set cul!
+
+" Airline config
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='nord'
