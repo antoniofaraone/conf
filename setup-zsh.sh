@@ -1,9 +1,12 @@
 #!/usr/bin/bash
 
-sudo apt install zsh
+sudo apt install zsh -y;
+sudo apt install gem -y;
+sudo apt install gem-dev -y;
+sudo gem install colorls;
 
 if [ ! -x /usr/bin/curl ]; then
-	sudo apt install curl
+	sudo apt install curl -y
 fi
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
