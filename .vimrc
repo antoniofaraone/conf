@@ -39,6 +39,7 @@ nmap <C-t> :NERDTreeToggle<CR>
 set nu
 set relativenumber
 set laststatus=2
+set tabstop=4
 set noshowmode
 let mapleader = ","
 
@@ -53,7 +54,6 @@ inoremap <silent> <Down> <Esc>gja
 " Bash / emacs keys for command line
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
-set autoindent
 :autocmd InsertEnter,InsertLeave * set cul!
 
 " Visual prompt for command completion
