@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-
 " Theme
 Plug 'arcticicestudio/nord-vim'
 
@@ -31,6 +30,12 @@ Plug 'tpope/vim-unimpaired'
 "
 " Tabnine
 Plug 'zxqfl/tabnine-vim'
+
+" emoticon
+Plug 'junegunn/vim-emoji'
+
+" Toml 
+Plug 'cespare/vim-toml'
 call plug#end()
 
 """"""""""""""""""""""" Configurazioni""""""""""""
@@ -76,3 +81,6 @@ vmap <C-j> ]egv
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='nord'
+
+" Emoji
+set completefunc=emoji#complete

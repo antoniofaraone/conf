@@ -12,11 +12,7 @@ fi
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # source variable
-if [ -d "$HOME/.cargo/bin" ]; then
-export PATH="$HOME/.cargo/bin":$PATH
-fi
-
-
+source ~/.env_var
 
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
