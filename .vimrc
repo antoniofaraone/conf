@@ -36,6 +36,10 @@ Plug 'junegunn/vim-emoji'
 
 " Toml 
 Plug 'cespare/vim-toml'
+
+" A Vim Plugin for Lively Previewing LaTeX PDF Output
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
 call plug#end()
 
 """"""""""""""""""""""" Configurazioni""""""""""""
@@ -80,7 +84,7 @@ vmap <C-j> ]egv
 " Airline config
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='nord'
+let g:airline_theme='powerlineish'
 
 " Emoji
 set completefunc=emoji#complete
