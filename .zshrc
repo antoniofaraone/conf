@@ -59,7 +59,6 @@ setopt hist_verify            # show command with history expansion to user befo
 
 # force zsh to show the complete history
 alias history="history 0"
-alias lc='colorls'
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -187,7 +186,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias diff='diff --color=auto'
     alias ip='ip --color=auto'
     alias cp='cp -i'
-
+    alias rm='rm -i'
+    alias mv='mv -i'
+	alias lc='colorls'
+	
     export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
     export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
     export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink

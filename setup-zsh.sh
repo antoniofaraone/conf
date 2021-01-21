@@ -5,6 +5,8 @@ sudo apt install gem -y;
 sudo apt install gem-dev -y;
 sudo apt install ruby-dev -y;
 sudo gem install colorls;
+sudo apt install zsh-autosuggestions;
+sudo apt install zsh-syntax-highlighting;
 
 if [ ! -x /usr/bin/curl ]; then
 	sudo apt install curl -y
