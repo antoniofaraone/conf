@@ -3,6 +3,7 @@
 sudo apt install zsh -y;
 sudo apt install gem -y;
 sudo apt install gem-dev -y;
+sudo apt install ruby-dev -y;
 sudo gem install colorls;
 
 if [ ! -x /usr/bin/curl ]; then
