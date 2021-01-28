@@ -49,6 +49,7 @@ set nu
 set relativenumber
 set laststatus=2
 set tabstop=4
+set encoding=utf-8
 set noshowmode
 let mapleader = ","
 
