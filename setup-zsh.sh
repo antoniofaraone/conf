@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+# All stuff to better shell
 sudo apt install zsh -y;
 sudo apt install gem -y;
 sudo apt install gem-dev -y;
