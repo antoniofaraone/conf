@@ -40,6 +40,18 @@ Plug 'cespare/vim-toml'
 " A Vim Plugin for Lively Previewing LaTeX PDF Output
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
+Plug 'tpope/vim-surround'
+
+" Solidity plugin
+Plug 'tomlion/vim-solidity'
+
+" Commentar
+Plug 'tpope/vim-commentary'
+
+" Prettier
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+
+
 call plug#end()
 
 """"""""""""""""""""""" Configurazioni""""""""""""
@@ -48,11 +60,17 @@ nmap <C-t> :NERDTreeToggle<CR>
 set nu
 set relativenumber
 set laststatus=2
-set tabstop=4
 set encoding=utf-8
 set noshowmode
 let mapleader = ","
 
+" Indentation
+set autoindent
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+set shiftround
+set expandtab
 " Direction keys for wrapped lines
 nnoremap <silent> k gk
 nnoremap <silent> j gj
@@ -89,3 +107,9 @@ let g:airline_theme='powerlineish'
 
 " Emoji
 set completefunc=emoji#complete
+
+" Prettier
+let g:prettier#quickfix_enabled = 0
+
+autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
