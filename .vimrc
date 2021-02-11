@@ -51,8 +51,15 @@ Plug 'tpope/vim-commentary'
 " Prettier
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
+" TagBar
+Plug 'preservim/tagbar'
+
+" javascript
+Plug 'maxmellon/vim-jsx-pretty'
+
 
 call plug#end()
+
 
 """"""""""""""""""""""" Configurazioni""""""""""""
 
@@ -112,4 +119,13 @@ set completefunc=emoji#complete
 let g:prettier#quickfix_enabled = 0
 
 autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+" TagBar
+nmap <F8> :TagbarToggle<CR>
+
+" FZF
+nnoremap <C-p> :GFiles<Cr>
+
+" NerdTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
