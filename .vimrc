@@ -26,13 +26,9 @@ Plug 'davidhalter/jedi-vim'
 
 " [1] Move line up and down 
 Plug 'tpope/vim-unimpaired'
-" Initialize plugin system
-"
+
 " Tabnine
 Plug 'zxqfl/tabnine-vim'
-
-" emoticon
-Plug 'junegunn/vim-emoji'
 
 " Toml 
 Plug 'cespare/vim-toml'
@@ -51,12 +47,19 @@ Plug 'tpope/vim-commentary'
 " Prettier
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
-" TagBar
-Plug 'preservim/tagbar'
+"Rainbow parenthesi
+Plug 'luochen1990/rainbow'
 
-" javascript
+" auto close parenthesis
+Plug 'jiangmiao/auto-pairs'
+
+" React
+Plug 'othree/yajs.vim'
+
 Plug 'maxmellon/vim-jsx-pretty'
 
+" Emmet
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -112,20 +115,20 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='powerlineish'
 
-" Emoji
-set completefunc=emoji#complete
-
 " Prettier
 let g:prettier#quickfix_enabled = 0
 
 autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-
-" TagBar
-nmap <F8> :TagbarToggle<CR>
 
 " FZF
 nnoremap <C-p> :GFiles<Cr>
 
 " NerdTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Rainbow par
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+
+" Emmet
+let g:user_emmet_leader_key=','
 

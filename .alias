@@ -15,7 +15,7 @@ alias l='ls -CF'
 alias g='git'
 alias gan='/opt/ganache-2.5.4-linux-x86_64.AppImage'
 alias gcs='git commit -S'
-
+alias ev='vim ~/.vimrc'
 
 mkcd ()
 {
