@@ -61,6 +61,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 " Emmet
 Plug 'mattn/emmet-vim'
 
+" AutoCompletion
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+
 call plug#end()
 
 
@@ -72,7 +75,7 @@ set relativenumber
 set laststatus=2
 set encoding=utf-8
 set noshowmode
-let mapleader = ","
+let mapleader = " "
 
 " Indentation
 set autoindent
@@ -132,3 +135,8 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 " Emmet
 let g:user_emmet_leader_key=','
 
+" COC
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+"----- COC Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
