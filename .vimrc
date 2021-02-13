@@ -34,7 +34,7 @@ Plug 'zxqfl/tabnine-vim'
 Plug 'cespare/vim-toml'
 
 " A Vim Plugin for Lively Previewing LaTeX PDF Output
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'vim-latex/vim-latex'
 
 Plug 'tpope/vim-surround'
 
@@ -64,18 +64,22 @@ Plug 'mattn/emmet-vim'
 " AutoCompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 
+" vim test
+Plug 'vim-test/vim-test'
+
+
 call plug#end()
 
 
 """"""""""""""""""""""" Configurazioni""""""""""""
-
-nmap <C-t> :NERDTreeToggle<CR>
+let mapleader = " "
+set encoding=utf-8
+set laststatus=2
+set noshowmode
 set nu
 set relativenumber
-set laststatus=2
-set encoding=utf-8
-set noshowmode
-let mapleader = " "
+set ruler
+set title
 
 " Indentation
 set autoindent
@@ -127,6 +131,7 @@ autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,
 nnoremap <C-p> :GFiles<Cr>
 
 " NerdTree
+nmap <C-t> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Rainbow par
@@ -140,3 +145,6 @@ nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
 "----- COC Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+" Autocompile latex
+autocmd BufWritePost main.tex silent! execute "!pdflatex % >/dev/null 2>&1" | redraw!
