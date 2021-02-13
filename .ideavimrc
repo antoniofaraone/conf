@@ -103,7 +103,8 @@ nmap <leader>yd :action Compare.LastVersion<cr>
 " nmap <leader>yr :action Git.ResolveConflicts<cr>
 
 " Terminal
-nmap <leader>T :action ActivateTerminalToolWindow<cr>
+" nmap <leader>T :action ActivateTerminalToolWindow<cr>
+nmap <leader>T :action Tool_External Tools_term<cr>
 
 " External GVim
 nmap <leader>v :action Tool_External Tools_gvim<cr>
