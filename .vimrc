@@ -67,6 +67,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " vim test
 Plug 'vim-test/vim-test'
 
+" Higlight
+Plug 'romainl/vim-cool'
 
 call plug#end()
 
@@ -88,6 +90,14 @@ set tabstop=2
 set softtabstop=2
 set shiftround
 set expandtab
+
+" Searching
+set ignorecase
+set smartcase
+set gdefault
+set hlsearch
+set showmatch
+
 " Direction keys for wrapped lines
 nnoremap <silent> k gk
 nnoremap <silent> j gj
