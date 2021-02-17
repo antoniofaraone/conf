@@ -17,17 +17,16 @@ set ideajoin
 " Multiple cursors support
 set multiple-cursors
 
-" These settings are from - https://github.com/Valloric/dotfiles/blob/master/intellij/ideavimrc
+" NERDTree
+set NERDTree
 
-" let mapleader = ","
 let mapleader = " "
-" let maplocalleader = ","
 
 " Use Q for formatting the current paragraph (or visual selection)
 vmap Q gq
 nmap Q gqap
 :map <leader><leader>f <Action>(ReformatCode)
-
+:map <leader><leader>p <Action>(ReformatWithPrettierAction)
 " These create newlines like o and O but stay in normal mode
 nmap zj o<Esc>k
 nmap zk O<Esc>j
@@ -36,7 +35,7 @@ nmap zk O<Esc>j
 " h left, l right, k up, j down
 " nmap <leader>h <c-w>h
 " nmap <leader>l <c-w>l
-" nmap <leader>k <c-w>k
+" nmap <leader>k <c-w>K
 " nmap <leader>j <c-w>j
 
 " Closing tabs
@@ -44,7 +43,7 @@ nmap <leader>q :action CloseContent<cr>
 nmap <leader>Q :action ReopenClosedTab<cr>
 
 " To navigate between split panes
-nmap <leader>wo :action NextSplitter<cr>
+nmap <leader>wn :action NextSplitter<cr>
 nmap <leader>wp :action PrevSplitter<cr>
 nmap <leader>j :action PrevSplitter<cr>
 
@@ -97,11 +96,13 @@ nmap <leader>rI :action OptimizeImports<cr>
 nmap <leader>rc :action InspectCode<cr>
 
 " VCS operations
-nmap <leader>yy :action Vcs.Show.Local.Changes<cr>
-nmap <leader>yp :action Vcs.QuickListPopupAction<cr>
-nmap <leader>ya :action Annotate<cr>
-nmap <leader>yl :action Vcs.Show.Log<cr>
-nmap <leader>yd :action Compare.LastVersion<cr>
+nmap <leader>cy :action Vcs.Show.Local.Changes<cr>
+nmap <leader>cp :action Vcs.QuickListPopupAction<cr>
+nmap <leader>ca :action Annotate<cr>
+nmap <leader>cl :action Vcs.Show.Log<cr>
+nmap <leader>cd :action Compare.LastVersion<cr>
+nmap <leader>cc :action ActivateCommitToolWindow<cr>
+nmap <leader>cp :action Vcs.Push<cr>
 " nmap <leader>yr :action Git.ResolveConflicts<cr>
 
 " Terminal
@@ -124,6 +125,7 @@ nmap <a-k> 15gk
 " Won't work in visual mode (with vmap) for some reason.
 " Use default map of <c-/> for that.
 nmap gcc :action CommentByLineComment<cr>
+nmap gC  :action CommentByBlockComment<cr>
 
 " unimpaired mappings - from https://github.com/saaguero/ideavimrc/blob/master/.ideavimrc
 nnoremap [<space> O<esc>j
