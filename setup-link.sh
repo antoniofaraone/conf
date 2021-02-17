@@ -31,4 +31,5 @@ linkDotfile .tmux.conf
 linkDotfile .alias
 linkDotfile .env_var
 linkDotfile .zshrc
+linkDotfile .gitconfig
 

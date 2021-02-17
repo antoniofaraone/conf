@@ -1,0 +1,21 @@
+[user]
+	email = antoniofaraone93@gmail.com
+	name = Antonio Faraone
+	signingkey = antoniofaraone93@gmail.com
+[commit]
+	gpgSign = true
+[tag]
+	forceSignAnnotated = true
+[alias]
+	s = status
+	p = push
+	c = commit
+	d = difftool
+[core]
+	editor = vim
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
