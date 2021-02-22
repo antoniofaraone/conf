@@ -23,6 +23,13 @@ set relativenumber
 set ruler
 set title
 
+" => Easy quit and save
+nmap <leader>q :q<CR>
+nmap <leader>x :x<CR>
+nmap <leader><ESC> :qall<CR>
+nmap <leader>w :w<CR>
+
+
 " ================================================================================ 
 " => Indentation
 set autoindent
