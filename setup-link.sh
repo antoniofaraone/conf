@@ -1,11 +1,12 @@
 #!/bin/bash
 dotfilesDir=$(pwd)
+vimDir=~/.vim
 
 function linkDotfile() {
-  dest="${HOME}/${1}"
+  dest="${1}/${2}"
   dateStr=$(date +%Y-%m-%d-%H%M)
 
-  if [ -h ~/${1} ]; then
+  if [ -h ~/${2} ]; then
     # Existing symlink
     echo "Removing existing symlink: ${dest}"
     rm ${dest}
@@ -22,14 +23,14 @@ function linkDotfile() {
   fi
 
   echo "Creating new symlink: ${dest}"
-  ln -s ${dotfilesDir}/${1} ${dest}
+  ln -s ${dotfilesDir}/${2} ${dest}
 
 }
 
-linkDotfile .vimrc
-linkDotfile .tmux.conf
-linkDotfile .alias
-linkDotfile .env_var
-linkDotfile .zshrc
-linkDotfile .gitconfig
-
+linkDotfile  $HOME    .vimrc
+linkDotfile  $HOME    .tmux.conf
+linkDotfile  $HOME    .alias
+linkDotfile  $HOME    .env_var
+linkDotfile  $HOME    .zshrc
+linkDotfile  $HOME    .gitconfig
+linkDotfile  $vimDir  plugins.vim
