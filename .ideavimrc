@@ -31,13 +31,6 @@ nmap Q gqap
 nmap zj o<Esc>k
 nmap zk O<Esc>j
 
-" key bindings for quickly moving between windows
-" h left, l right, k up, j down
-" nmap <leader>h <c-w>h
-" nmap <leader>l <c-w>l
-" nmap <leader>k <c-w>K
-" nmap <leader>j <c-w>j
-
 " Closing tabs
 nmap <leader>q :action CloseContent<cr>
 nmap <leader>Q :action ReopenClosedTab<cr>
@@ -69,7 +62,6 @@ nmap <leader>u :action FindUsages<cr>
 nmap <leader>f :action GotoFile<cr>
 nmap <leader>c :action GotoClass<cr>
 nmap <leader>s :action GotoSymbol<cr>
-" nmap <leader>m :action FileStructurePopup<cr>
 nmap <leader>; :action FileStructurePopup<cr>
 nmap <leader>M :action ActivateStructureToolWindow<cr>
 nmap <leader>d :action ShowErrorDescription<cr>
@@ -80,7 +72,6 @@ nmap <leader>t :action GotoTest<cr>
 nmap <leader>p :action JumpToLastWindow<cr>
 nmap <leader>b :action ShowBookmarks<cr>
 
-" nmap <leader>a :action Switcher<cr>
 nmap <leader>a :action RecentChangedFiles<cr>
 
 " Errors
@@ -103,10 +94,8 @@ nmap <leader>gl :action Vcs.Show.Log<cr>
 nmap <leader>gd :action Compare.LastVersion<cr>
 nmap <leader>gc :action ActivateCommitToolWindow<cr>
 nmap <leader>gp :action Vcs.Push<cr>
-" nmap <leader>yr :action Git.ResolveConflicts<cr>
 
 " Terminal
-" nmap <leader>T :action ActivateTerminalToolWindow<cr>
 nmap <leader>T :action Tool_External Tools_term<cr>
 
 " External GVim
