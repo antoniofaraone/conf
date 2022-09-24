@@ -27,9 +27,6 @@ Plug 'davidhalter/jedi-vim'
 " [1] Move line up and down 
 Plug 'tpope/vim-unimpaired'
 
-" Tabnine
-Plug 'zxqfl/tabnine-vim'
-
 " Toml 
 Plug 'cespare/vim-toml'
 
@@ -37,9 +34,6 @@ Plug 'cespare/vim-toml'
 Plug 'vim-latex/vim-latex'
 
 Plug 'tpope/vim-surround'
-
-" Solidity plugin
-Plug 'tomlion/vim-solidity'
 
 " Commentar
 Plug 'tpope/vim-commentary'
