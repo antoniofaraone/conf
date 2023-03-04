@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 " Theme
-Plug 'arcticicestudio/nord-vim'
+"Plug 'arcticicestudio/nord-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Easy-motion
 Plug 'easymotion/vim-easymotion'
@@ -48,15 +49,15 @@ Plug 'luochen1990/rainbow'
 Plug 'jiangmiao/auto-pairs'
 
 " React
-Plug 'othree/yajs.vim'
+"Plug 'othree/yajs.vim'
 
-Plug 'maxmellon/vim-jsx-pretty'
+"Plug 'maxmellon/vim-jsx-pretty'
 
 " Emmet
 Plug 'mattn/emmet-vim'
 
 " AutoCompletion
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 
+"Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 
 " vim test
 Plug 'vim-test/vim-test'
