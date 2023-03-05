@@ -77,12 +77,15 @@ set wildmenu
 " ================================================================================ 
 " => Theme
 syntax on
-colorscheme nord
+colorscheme dracula
 
 
 
 " ================================================================================ 
 " => Plugin config 
+
+"EasyMotion
+map <Leader>s <Plug>(easymotion-prefix)
 
 
 " => [1] unimpaired
